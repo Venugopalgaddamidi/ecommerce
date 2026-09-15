@@ -1,0 +1,167 @@
+/* Page background */
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+  font-family: Arial, sans-serif;
+}
+
+/* Login form */
+form {
+  width: 95%;
+  max-width: 550px;
+
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+  box-sizing: border-box;
+
+  animation: slideUp 0.7s ease;
+}
+
+/* Each input row */
+form div {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  min-height: 50px;
+}
+
+/* Labels */
+form span {
+  width: 110px;
+
+  font-weight: bold;
+
+  color: #444;
+
+  font-size: 15px;
+
+  flex-shrink: 0;
+}
+
+/* Input fields */
+input {
+  flex: 1;
+
+  width: 100%;
+
+  padding: 15px 16px;
+
+  border: 2px solid #ddd;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  transition: all 0.3s ease;
+}
+
+/* Input focus */
+input:focus {
+  border-color: #667eea;
+
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+
+  transform: scale(1.02);
+}
+
+/* Placeholder */
+input::placeholder {
+  color: #aaa;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+
+  padding: 15px;
+
+  margin-top: 10px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Button click */
+button:active {
+  transform: scale(0.97);
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  form {
+    width: 95%;
+    padding: 30px 20px;
+  }
+
+  form div {
+    display: block;
+    margin-bottom: 18px;
+  }
+
+  form span {
+    display: block;
+    width: 100%;
+    margin-bottom: 7px;
+  }
+
+  input {
+    width: 100%;
+    padding: 14px;
+  }
+
+  button {
+    padding: 14px;
+  }
+}
